@@ -1,0 +1,46 @@
+.SignInForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px 10px 20px 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-color: white;
+    color: rgb(80, 80, 80);
+}
+
+.EmailInput{
+    width: 240px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1rem;
+    background-color: #fafafa;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.PasswordInput{
+    width: 240px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1rem;
+    background-color: #fafafa;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.ToSignUpBtn, .SignInBtn{
+    width: 180px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f3f3f3;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.ToSignUpBtn:hover, .SignInBtn:hover{
+    color: white;
+    background-color: #9c9c9c;
+    border: 1px solid black;
+}

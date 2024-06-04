@@ -1,0 +1,55 @@
+.Input{
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: rgba(100, 100, 100, 0.5);
+    border-radius: 6px;
+    color: white;
+    padding: 6px;
+    padding-left: 10px;
+    border: 1px solid lightgray;
+}
+.Input:focus{
+    outline: none;
+    background-color: rgba(200, 200, 200, 0.25);
+}
+
+.HomeBtn{
+    padding: 0;
+    width: 70px;
+    color: white;
+    display: inline-block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+
+.NavWrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: #363636;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 36px;
+    letter-spacing: 16px;
+    z-index: 3;
+}
+.Sign{
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    letter-spacing: 0.05em;
+}
+
+.SignIn{
+    cursor: pointer;
+}
+
+.SignUp{
+    cursor: pointer;
+}
