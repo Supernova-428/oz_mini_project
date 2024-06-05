@@ -22,14 +22,19 @@ const MovieDetail = () => {
   return (
     <div className='container'>
         <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} className='poster'/>
-        <h1 className='title'>{movie.title}</h1>
-        <span className='vote_average'>{movie.vote_average}</span>
-        <div className='genres'>
-            {movie.genres.map((genre) => (
-                <sapn className='genre' key={genre.id}>{genre.name}</sapn>
-            ))}
+        <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} className='backdrop'/>
+        <div className='info'>
+          <div className='title_rate'>
+            <h1 className='title'>{movie.title}</h1>
+            <p className='vote_average'>{movie.vote_average}</p>
+          </div>
+          <div className='genres'>
+              {movie.genres.map((genre) => (
+                  <sapn className='genre' key={genre.id}>{genre.name}</sapn>
+              ))}
+          </div>
+          <p className='overview'>{movie.overview}</p>
         </div>
-        <p className='overview'>{movie.overview}</p>
     </div>
   )
 }

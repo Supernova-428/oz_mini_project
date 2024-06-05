@@ -11,6 +11,7 @@ import Signup from './components/Signup'
 import Login from './components/Login'
 import axios from './api/axios'
 import requests from './api/requests'
+import Search from './components/Search'
 function App() {
 
   const [movieList, setMovieList] = useState([])
@@ -49,6 +50,7 @@ function App() {
             </Container>
           } />
           <Route path=':movieId' element={<MovieDetail />} />
+          <Route path='search' element={<Search />} />
         </Route>
       </Routes>
     </>
@@ -59,7 +61,7 @@ export default App
 
 const Container = styled.div`
   margin-top: 70px;
-  padding: 0px;
+  padding: 10px 0 10px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

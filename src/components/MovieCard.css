@@ -10,6 +10,7 @@
 }
 .movieCard:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    scale: 1.07;
 }
 .MovieThumbInfo{
     display: flex;
@@ -20,4 +21,53 @@ img{
     height: 90%;
     border-radius: 0.5rem;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .Backdrop{
+        display: none;
+    }
+    .movieCard{
+        width: 200px;
+        height: 350px;
+        margin: 8px;
+    }
+    .Title{
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        margin: 10px 0 10px 0;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .Backdrop{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .movieCard{
+        width: 150px;
+        height: 110px;
+        margin: 7px;
+        font-size: 0.7rem;
+    }
+    .Title{
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        margin: 10px 0 10px 0;
+    }
+    img{
+        height: 75%;
+    }
+    .Poster{
+        display: none;
+    }
+    .Backdrop{
+        display: block;
+    }
 }

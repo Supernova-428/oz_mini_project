@@ -1,13 +1,18 @@
 .Input{
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%, 0);
     background-color: rgba(100, 100, 100, 0.5);
     border-radius: 6px;
     color: white;
     padding: 6px;
     padding-left: 10px;
     border: 1px solid lightgray;
+}
+.Input.Show{
+    opacity: 1;
+    pointer-events: auto;
+}
+.Input.Hide{
+    opacity: 0;
+  pointer-events: none;
 }
 .Input:focus{
     outline: none;
@@ -39,11 +44,12 @@
     z-index: 3;
 }
 .Sign{
-    width: 120px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     color: white;
     letter-spacing: 0.05em;
+    gap: 20px;
 }
 
 .SignIn{
@@ -52,4 +58,47 @@
 
 .SignUp{
     cursor: pointer;
+}
+
+@media screen and (max-width: 425px) {
+    .InputIcon{
+        display: block;
+    }
+    .Input, .SignIn, .SignUp, .SignUpIcon{
+        display: none;
+    }
+    .Input.Show{
+        display: block;
+        width: 130px;
+    }
+    
+    .InputIcon.Hide{
+        display: none;
+    }
+}
+
+/* @media screen and (min-width: 726px) {
+    .SignInIcon{
+        display: none;
+    }
+} */
+
+@media screen and (min-width: 426px) {
+    .InputIcon, .SignIn, .SignUp{
+        display: none;
+    }
+    .Input{
+        display: block;
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .SignIn, .SignUp{
+        display: block;
+    }
+    .SignInIcon, .SignUpIcon{
+        display: none;
+    }
 }
