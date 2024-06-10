@@ -14,6 +14,10 @@ const Signup = () => {
 
   const handleOnSubmit = (e) => {
     e.preventDefault()
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  // 비밀번호 유효성 검사 정규 표현식
+  const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+
     if (!name || !email || !password || !confirmPassword) {
       alert('모든 필드를 입력해 주세요.');
       return;
@@ -24,6 +28,16 @@ const Signup = () => {
       return;
     }
 
+    if (!emailRegex.test(email)) {
+      alert('유효한 이메일 주소를 입력해 주세요.');
+      return;
+    }
+  
+    if (!passwordRegex.test(password)) {
+      alert('비밀번호는 최소 8자 이상, 대문자, 소문자, 숫자를 포함해야 합니다.');
+      return;
+    }
+    
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const user = userCredential
