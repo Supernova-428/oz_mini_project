@@ -1,5 +1,5 @@
 .poster{
-	width: 40vw;
+	height: 80vh;
 	margin-top: 50px;
 }
 .container{
@@ -8,9 +8,12 @@
 	margin-top: 70px;
 }
 
-.poster{
+.poster, .backdrop{
 	margin: 20px;
+	border-radius: 0.5rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
+
 .info{
 	display: flex;
 	flex-direction: column;

@@ -23,11 +23,6 @@ const Signup = () => {
       return;
     }
 
-    if (password !== confirmPassword) {
-      alert('비밀번호가 일치하지 않습니다.');
-      return;
-    }
-
     if (!emailRegex.test(email)) {
       alert('유효한 이메일 주소를 입력해 주세요.');
       return;
@@ -35,6 +30,11 @@ const Signup = () => {
   
     if (!passwordRegex.test(password)) {
       alert('비밀번호는 최소 8자 이상, 대문자, 소문자, 숫자를 포함해야 합니다.');
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      alert('비밀번호가 일치하지 않습니다.');
       return;
     }
     
