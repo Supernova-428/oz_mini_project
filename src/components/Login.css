@@ -31,7 +31,7 @@
     border-radius: 5px;
 }
 
-.ToSignUpBtn, .SignInBtn{
+.Btn{
     width: 180px;
     padding: 10px;
     margin: 10px;
@@ -39,7 +39,7 @@
     border: 1px solid gray;
     border-radius: 5px;
 }
-.ToSignUpBtn:hover, .SignInBtn:hover{
+.Btn:hover{
     color: white;
     background-color: #9c9c9c;
     border: 1px solid black;
